@@ -1,0 +1,34 @@
+// Обязательные импорты в правильном порядке
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+
+// Определение типа цветового режима
+$color-mode-type: "data";
+$c-pink-rgb: 192 123 246;
+$c-pink: rgb($c-pink-rgb);
+
+// Кастомизация dark mode
+@include color-mode(dark) {
+  --bs-light-rgb: 55, 55, 55;
+
+  .btn-light {
+    --bs-btn-bg: rgb(var(--bs-light-rgb));
+    --bs-btn-border-color: rgb(var(--bs-light-rgb));
+    --bs-btn-hover-bg: #434950;
+    --bs-btn-hover-border-color: #434950;
+  }
+}
+
+// Кастомизация чекбоксов
+.form-check-input:checked {
+  background-color: $c-pink;
+  border-color: $c-pink;
+}
+
+.form-control:focus, .form-check-input:focus, .btn-light:focus{
+  border-color: $c-pink;
+  box-shadow: 0 0 0 .25rem rgba($c-pink, 0.2);
+}
