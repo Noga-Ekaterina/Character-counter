@@ -78,7 +78,7 @@ const Form = () => {
                 </div>
             }
           </div>
-          <p className="col-6 text-md-end">Approx. reading time (Avg. 50WPM): {readingTime}</p>
+          <p className="col-12 col-md-6 text-md-end">Approx. reading time<span className="d-none d-md-inline"> (Avg. 50WPM)</span>: {readingTime}</p>
         </div>
       </div>
   );

@@ -1,0 +1,7 @@
+.word-count{
+  background-color: #ff9f00;
+
+  &:after{
+    background-image: url("../../../assets/bg-word.svg");
+  }
+}

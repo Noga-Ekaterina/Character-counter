@@ -1,0 +1,7 @@
+.sentence-count{
+  background-color: #FE815A;
+
+  &:after{
+    background-image: url("../../../assets/bg-sentence.svg");
+  }
+}

@@ -7,11 +7,15 @@
 
 // Определение типа цветового режима
 $color-mode-type: "data";
-$c-pink-rgb: 192 123 246;
-$c-pink: rgb($c-pink-rgb);
+
+:root{
+  --c-pink-rgb: 192, 123, 246;
+  --c-pink: rgb(var(--c-pink-rgb))
+}
 
 // Кастомизация dark mode
 @include color-mode(dark) {
+  --c-pink-rgb: 209, 159, 248;
   --bs-light-rgb: 55, 55, 55;
 
   .btn-light {
@@ -24,15 +28,11 @@ $c-pink: rgb($c-pink-rgb);
 
 // Кастомизация чекбоксов
 .form-check-input:checked {
-  background-color: $c-pink;
-  border-color: $c-pink;
+  background-color: var(--c-pink);
+  border-color: var(--c-pink);
 }
 
 .form-control:focus, .form-check-input:focus, .btn-light:focus{
-  border-color: $c-pink;
-  box-shadow: 0 0 0 .25rem rgba($c-pink, 0.2);
-}
-
-.error{
-  color: red;
+  border-color: var(--c-pink);
+  box-shadow: 0 0 0 .25rem rgba(var(--c-pink-rgb), 0.2);
 }

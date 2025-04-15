@@ -1,0 +1,7 @@
+.total-characters{
+  background-color: var(--c-pink);
+
+  &:after{
+    background-image: url("../../../assets/bg-characters.svg");
+  }
+}
