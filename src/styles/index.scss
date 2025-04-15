@@ -32,3 +32,7 @@ $c-pink: rgb($c-pink-rgb);
   border-color: $c-pink;
   box-shadow: 0 0 0 .25rem rgba($c-pink, 0.2);
 }
+
+.error{
+  color: red;
+}
