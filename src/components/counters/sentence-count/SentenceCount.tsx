@@ -9,8 +9,7 @@ const SentenceCount = () => {
 
   function countSentences(text: string) {
     // Разделяем текст по .!?, включая множественные разделители
-    const sentences = _.split(text, /[.!?]+/g);
-    // Фильтруем непустые предложения (без пробелов)
+    const sentences = _.split(text, /(?<=[.!?])\s+/g);    // Фильтруем непустые предложения (без пробелов)
     const nonEmpty = _.filter(sentences, sentence => !_.isEmpty(_.trim(sentence)));
     // Возвращаем количество
     return _.size(nonEmpty);

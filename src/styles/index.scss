@@ -10,7 +10,8 @@ $color-mode-type: "data";
 
 :root{
   --c-pink-rgb: 192, 123, 246;
-  --c-pink: rgb(var(--c-pink-rgb))
+  --c-pink: rgb(var(--c-pink-rgb));
+  --bs-border-width: 2px
 }
 
 // Кастомизация dark mode
@@ -19,17 +20,27 @@ $color-mode-type: "data";
   --bs-light-rgb: 55, 55, 55;
 
   .btn-light {
+    --bs-btn-color: var(--bs-body-color);
     --bs-btn-bg: rgb(var(--bs-light-rgb));
     --bs-btn-border-color: rgb(var(--bs-light-rgb));
     --bs-btn-hover-bg: #434950;
+    --bs-btn-hover-color: #ebe7d9;
     --bs-btn-hover-border-color: #434950;
   }
 }
 
 // Кастомизация чекбоксов
-.form-check-input:checked {
-  background-color: var(--c-pink);
-  border-color: var(--c-pink);
+.form-check-input{
+  cursor: pointer;
+
+  &:checked {
+    background-color: var(--c-pink);
+    border-color: var(--c-pink);
+  }
+}
+
+label{
+  cursor: pointer;
 }
 
 .form-control:focus, .form-check-input:focus, .btn-light:focus{

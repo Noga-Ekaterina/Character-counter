@@ -22,9 +22,9 @@ const Header = () => {
         <div className="col-6 col-md-4 col-lg-3">
           <img alt="Logo" src={isDark? logoDark:logoLight} className="img-fluid"/>
         </div>
-        <div className="col-2 col-md-1">
+        <div className="col-3 col-md-1 d-flex justify-content-end">
           <button onClick={togleTheme} className="btn btn-light p-2" type="button">
-            <img alt="Значок Луны" loading="lazy" width="24" height="24" src={isDark? sun:moon} className="img-fluid"/>
+            <img src={isDark? sun:moon} className="img-fluid"/>
           </button>
         </div>
       </div>
